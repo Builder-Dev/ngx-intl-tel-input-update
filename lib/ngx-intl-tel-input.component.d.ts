@@ -34,6 +34,7 @@ export declare class NgxIntlTelInputComponent implements OnInit, OnChanges {
     disabled: boolean;
     errors: Array<any>;
     countrySearchText: string;
+    allCountriesMasterData: Array<Country>;
     countryList: ElementRef;
     onTouched: () => void;
     propagateChange: (_: ChangeData) => void;
@@ -97,4 +98,8 @@ export declare class NgxIntlTelInputComponent implements OnInit, OnChanges {
      * Resets searched value on dropdown reopen.
      */
     resetCountrySearchText(): void;
+    /**
+     * Sort array of objects alphabetically by field name.
+     */
+    sortAlphabeticallyByField(field: any): (a: any, b: any) => 1 | 0 | -1;
 }
